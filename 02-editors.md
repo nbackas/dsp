@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will use VIM because it seems to be the most useful one to know long term.
 
 ---
 
@@ -61,6 +61,6 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I'm going to use VIM as my graphical editor as well, for consistency. Its shortcuts for deleting and inserting words and characters, and finding things (especially paired brackets) seem very useful. I haven't begun to customize it at all yet, but from what I've read so far it seems ripe with potential for customization with downloadable plugins and adjustable settings.
 
 ---
