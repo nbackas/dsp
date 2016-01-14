@@ -41,10 +41,8 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 What does `xargs` do? Give an example of how to use it.
 
 > > 'xargs' is used to execute longer lists of arguments, which can create errors. It is useful for executing an argument on a list of files. It is especially useful when used in conjunction with 'find' or 'grep.' 
-
 Example:
 find /temp -name "*.txt" | xargs rm
-
 The above example will remove all .txt files from the 'temp' directory.
 
 ---
