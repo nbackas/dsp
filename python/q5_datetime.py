@@ -16,10 +16,6 @@ print days
 
 ####b) 
 
-<<<<<<< HEAD
-#PARSER doesn't work for this, split up string and use different function
-=======
->>>>>>> ffc7c47a5f7d03df09ac0b3d64f1c1f5eaccb3cd
  
 date_start = '12312013'  
 date_stop = '05282015'  
@@ -39,7 +35,4 @@ d_stop = parser.parse(date_stop)
 diff = d_stop - d_start
 days = diff.days
 print days
-<<<<<<< HEAD
 
-=======
->>>>>>> ffc7c47a5f7d03df09ac0b3d64f1c1f5eaccb3cd
