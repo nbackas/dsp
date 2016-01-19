@@ -1,3 +1,3 @@
 [Think Stats Chapter 4 Exercise 2](http://greenteapress.com/thinkstats2/html/thinkstats2005.html#toc41) (a random distribution)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+The pmf is not very useful for evaluating whether or not the random function is truly random. The cdf is a much better visualization. The cdf graph I generated (not sure how to share) does appear to be sufficiently random. It's not perfectly linear, but presumably upping the sample would flatten out the graph more. I ran it again with 10000 instead of 1000, and the cdf appeared almost perfectly linear. Therefore I would say that the random function is truly (although, not quite literally) random.
