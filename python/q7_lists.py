@@ -15,7 +15,18 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    
+    n=0
+    for word in words:
+	word_length = len(word)
+	if word_length>1 and word[0] == word[word_length-1]:
+	    n += 1
+
+    
+    return n
+
+   
+
 
 
 def front_x(words):
@@ -32,7 +43,23 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    
+
+    words.sort()
+    x_words = []
+    for word in words:
+	if word[0] == 'x':
+	    x_words.append(word)
+	    # words.remove(word)
+
+	    
+    for word in x_words:
+	words.remove(word)
+
+    print x_words + words
+    return x_words + words
+
+
 
 
 def sort_last(tuples):
@@ -49,7 +76,23 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    
+    
+    dec = []
+
+    for x in tuples:
+	dec.append((x[len(x)-1],x))
+    dec.sort()
+
+    und = []
+
+    for a, b in decorate:
+	und.append(b)
+    
+    
+    return und
+
+
 
 
 def remove_adjacent(nums):
@@ -68,8 +111,19 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
 
+    unique = []
+
+    for n in nums:
+	if len(unique)==0: 
+	    unique.append(n)
+    	elif n != unique[len(unique)-1]: 
+            unique.append(n)
+
+
+    return unique
+    	    
+	   
 
 def linear_merge(list1, list2):
     """
@@ -85,4 +139,11 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    
+
+    merged = list1 + list2
+    merged.sort()
+    return merged
+
+
+

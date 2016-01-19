@@ -3,22 +3,13 @@
 
 
 def donuts(count):
-    """
-    Given an int count of a number of donuts, return a string of the
-    form 'Number of donuts: <count>', where <count> is the number
-    passed in. However, if the count is 10 or more, then use the word
-    'many' instead of the actual count.
 
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
-    """
-    raise NotImplementedError
+	if count < 10:
+		return "Number of donuts: %d" %count
+	else:
+		return "Number of donuts: many"
+
+
 
 
 def both_ends(s):
@@ -37,7 +28,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    
+
+    return s[:2] + s[-2:]
+
 
 
 def fix_start(s):
@@ -56,7 +50,12 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    for x in range(0, len(s)):
+        if x > 0 and s[x] == s[0]: 
+	    return '*',
+	else:
+	    return s[x], 
+
 
 
 def mix_up(a, b):
@@ -74,7 +73,9 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+
+
 
 
 def verbing(s):
@@ -91,7 +92,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) < 3:
+	return s
+    elif s[-3:] == 'ing':
+	return s + 'ly'
+    else: 
+	return s + 'ing'
+
 
 
 def not_bad(s):
@@ -111,7 +118,16 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+
+    not_index = s.find('not')
+    bad_index = s.find('bad')
+    if not_index > -1 and bad_index > -1 and bad_index > not_index:
+
+	return s[:not_index] + 'good' + s[(bad_index+3):]
+    else:
+	return s
+   
+
 
 
 def front_back(a, b):
@@ -130,4 +146,21 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    
+    a_len = len(a)+1
+    b_len = len(b)+1
+    a_front = a[:a_len/2]
+    a_back = a[a_len/2:]
+    b_front = b[:b_len/2]
+    b_back = b[b_len/2:]
+
+    new_string = a_front + b_front + a_back + b_back
+    
+    return new_string
+
+
+
+
+
+
+
